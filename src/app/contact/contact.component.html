@@ -1,0 +1,107 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div>
+    <h1>Contact</h1>
+</div>
+<div class="content">
+    <p>Hai, <b>I’m David duChemin</b>. I’m an international assignment photographer, and best-selling author based on Vancouver Island, British Columbia (Canada). You can connect with me personally by email and my team will make sure I get it.</p>
+    <p><i>Please understand that it’s just not humanly possible for me to reply to every email, most especially when travelling. I’ll try my best, but in order to keep doing the work to which I feel most called, it often means reading and being grateful for emails but not having the time to respond.</i></p>
+    <p>If you have a question or need help, please contact my support team.</p>
+    <h5><b>Address:</b></h5>
+    <p>PO Box 38131 Morgan Heights<br>
+        Surrey, BC, V3Z 6R3<br>
+        Canada</p>
+</div>
+<iframe width="100%" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10459.814326853935!2d-122.78808706066981!3d49.04950616890501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485c4eb2be688f7%3A0xcbc27f283e820106!2sMorgan%20Heights%2C%20Surrey%2C%20BC%2C%20Canada!5e0!3m2!1sen!2sin!4v1639577910287!5m2!1sen!2sin">
+    <a href="https://goo.gl/maps/fwcXRp5NWPU6pmCM8">My location</a>
+</iframe><br>
+<div class="jumbotron jumbotron-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <h1 class="h1 text-center">
+                    Contact Form</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="well well-sm">
+                <form #userform="ngForm" (ngSubmit)="submitform(userform)" class="content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">
+                                    Name</label>
+                                <input type="text" class="form-control" id="name" required pattern="^[a-zA-Z]*$" name="name" #f1=ngModel [(ngModel)]="user.name"  placeholder="Enter name"/>
+                                <div *ngIf="!f1?.valid &&(f1?.dirty||f1?.touched)" class="error">
+                                    <div *ngIf="f1!.errors!['required']">
+                                      *Name is required 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">
+                                    Email Address</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                    </span>
+                                    <input type="email" class="form-control" id="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" #em=ngModel [(ngModel)]="user.email" placeholder="Enter email"/>              
+                                </div>
+                                <div *ngIf="!em?.valid &&(em?.dirty||em?.touched)" class="error">
+                                    <div *ngIf="em!.errors!['required']">
+                                      *email is required
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">
+                                    Subject</label>
+                                <select id="subject" class="form-control" name="subject" required="required">
+                                    <option value="na" selected="">Choose One:</option>
+                                    <option value="service">Service</option>
+                                    <option value="suggestions">Suggestions</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">
+                                    Message</label>
+                                <textarea name="message" id="message" class="form-control" rows="9" cols="25" minlength="10" maxlength="100" required pattern="^[a-zA-Z .,]*$" name="message" #mg=ngModel [(ngModel)]="user.message" placeholder="Message"></textarea>
+                                <div *ngIf="!mg?.valid &&(mg?.dirty||mg?.touched)"class="error">
+                                    <div *ngIf="mg!.errors!['required']">
+                                      *message is required
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <input class="button" type="submit" class="btn btn-primary col-sm-offset-3" [disabled]="!userform.valid"/>
+                        </div>   
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <br>
+    <br>
+    <br>
+</div>
+<div class="center">
+    <div class="pagination">
+    <a routerLink="/portfolio">&laquo;</a>
+    <a routerLink="/home">1</a>
+    <a routerLink="/about">2</a>
+    <a routerLink="/portfolio">3</a>
+    <a routerLink="contact" class="active">4</a>
+    <a routerLink="/user">5</a>
+    <a routerLink="/user">&raquo;</a>
+    </div>
+</div>
