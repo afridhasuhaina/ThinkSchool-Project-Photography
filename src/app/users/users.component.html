@@ -1,0 +1,30 @@
+<h1 class="text-center">{{pageTitle}}</h1>
+<p>Date : {{toDate | date}} </p>
+<table class="table table-bordered">
+    <tr class="bg-primary">
+        <th>ID</th>
+        <th>Name</th>
+        <th>UserName</th>
+        <th>Email</th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+    </tr>
+</table>
+<br>
+<br>
+<br>
+<div class="center">
+    <div class="pagination">
+        <a routerLink="/contact">&laquo;</a>
+        <a routerLink="/home">1</a>
+        <a routerLink="/about">2</a>
+        <a routerLink="/portfolio">3</a>
+        <a routerLink="/contact">4</a>
+        <a routerLink="user" class="active">5</a>
+        <a routerLink="/home">&raquo;</a>
+    </div>
+</div>
