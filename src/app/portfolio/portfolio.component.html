@@ -1,0 +1,27 @@
+<div>
+    <h1>Portfolio</h1>
+</div>
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let pi of Posttypes">
+            <div class="Blogbox mt-3 md-3">
+                <img src="{{pi.blogImg}}">
+                <h1>{{pi.blogName}}</h1>
+                
+                <a class="viewbtn" [routerLink]="['/portfolio',pi.id]">Read more</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="center">
+    <div class="pagination">
+        <a routerLink="/about">&laquo;</a>
+        <a routerLink="/home">1</a>
+        <a routerLink="/about">2</a>
+        <a routerLink="portfolio" class="active">3</a>
+        <a routerLink="/contact">4</a>
+        <a routerLink="/user">5</a>
+        <a routerLink="/contact">&raquo;</a>
+    </div>
+</div>
