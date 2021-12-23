@@ -1,0 +1,43 @@
+div h1{
+    text-align: center;
+}
+.abt{
+    margin: 8px;
+}
+.abt p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.abt img{
+    width:50%;
+    height:50%;
+}
+/*Pagination*/
+.center {
+    text-align: center;
+
+}
+.center .pagination {
+    display: inline-block;
+    padding-top:8px;
+}
+  
+.center .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s !important;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+  
+.center .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+  
+.pagination a:hover:not(.active) {
+    background-color: #ddd !important;
+}
