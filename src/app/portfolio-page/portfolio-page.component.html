@@ -1,0 +1,13 @@
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div  *ngIf="Posttypes">
+            <a routerLink="../../portfolio" class="btn btn-sm btn-dark mb-3">Back</a>
+            <img src="{{Posttypes[0].blogImg}}"  />
+            <h1 class="mt-3">{{Posttypes[0].blogName}}</h1>
+            <p>{{Posttypes[0].postDetails}}</p>
+            
+        </div>
+
+    </div>
+
+</div>
